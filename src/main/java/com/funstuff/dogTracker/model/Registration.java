@@ -8,4 +8,6 @@ import javax.validation.constraints.NotEmpty;
 public class Registration {
     @NotEmpty
     private String name;
+    @NotEmpty
+    private boolean tracked;
 }

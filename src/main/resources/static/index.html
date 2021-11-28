@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>Dog Tracker-STATIC</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="index.js"></script>
 </head>
 <body>
-<h1>Hello</h1>
-<a href="greeting">Greeting</a>
-<a href="registration">Registration</a>
+<h1>Welcome To Dog Tracker, Rachel</h1>
+<table id="dogs-grid" class="data-grid">
+    <tr><th>Dog Name</th><th>Age</th><th>Color</th><th>Sex</th><th>All About My Dog</th></tr>
+    <tr><td colspan="4"><button>Add Dog</button></td></tr>
+</table>
+<table id="parks-grid" class="data-grid">
+    <tr><th>Park Name</th><th>Address</th></tr>
+    <tr><td colspan="2"><button>Add Park</button></td></tr>
+</table>
 </body>
 </html>

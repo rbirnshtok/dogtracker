@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-<h1>Registration</h1>
+<h1>New Dog Owner Registration</h1>
 <form:form modelAttribute="registration">
     <form:errors path="*" cssClass="errorblock" element="div" />
     <table>
@@ -39,6 +39,24 @@
             <td>
                 <form:errors path="name" cddClass="error"/>
             </td>
+        </tr>
+        <tr>
+            <td>
+                <spring:message code="wantsToBeTracked"/>:
+            </td>
+            <td colspan="3">
+                <form:checkbox path="tracked" />
+            </td>
+            <td>
+                <form:errors path="tracked" cddClass="error"/>
+            </td>
+        </tr>
+        <tr>
+
+            <td colspan="3">
+                <button>Add Dog</button>
+            </td>
+
         </tr>
         <tr>
             <td colspan="3">
