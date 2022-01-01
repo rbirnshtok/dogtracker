@@ -18,7 +18,7 @@ import java.util.Date;
 public class Dog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int dogId;
+    private int id;
     private String dogName;
     private String breed;
     private String age;

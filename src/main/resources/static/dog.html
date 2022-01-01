@@ -4,12 +4,83 @@
     <title>Welcome To Dog Tracker</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="dog.js"></script>
-    <link rel="stylesheet" type="text/css" href="dogTracker.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="dogtracker_tables.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="dogtracker_tabs.css" media="screen" />
 </head>
 
 <body>
-<table id="dogsGrid" class="styled-table">
-</table>
-<button id="addNewDog">Add a new cute dog</button>
+
+<ul class="tab">
+    <li><a href="#" class="tablinks" onclick="openTab(event, 'ParksActivity')">Parks Activity</a></li>
+    <li><a href="#" class="tablinks" onclick="openTab(event, 'MyDogs')">My Dogs</a></li>
+    <li><a href="#" class="tablinks" onclick="openTab(event, 'MyParks')">My Parks</a></li>
+</ul>
+
+<div id="ParksActivity" class="tabcontent">
+    <h3>Parks Activity</h3>
+    <p>Here you can share your status and see others statuses</p>
+    <table>
+        <tr>
+            <td><button onclick="function clickCheckIn() {
+                document.getElementById('checkInStatus').innerHTML = 'You are playing in the park :)';
+                document.getElementById('checkOutStatus').innerHTML = '';
+            }
+            clickCheckIn()">Check In</button></td>
+            <td><button onclick="function clickCheckOut() {
+                document.getElementById('checkInStatus').innerHTML = '';
+                document.getElementById('checkOutStatus').innerHTML = 'You left the park :(';
+            }
+            clickCheckOut()">Check Out</button></td>
+        </tr>
+        <tr>
+            <td><label id="checkInStatus"></label></td>
+            <td><label id="checkOutStatus"></label></td>
+        </tr>
+    </table>
+</div>
+
+<div id="MyDogs" class="tabcontent">
+    <h3>My Dogs</h3>
+    <p>You can edit your dogs information here</p>
+
+    <table id="dogsGrid" class="styled-table">
+    </table>
+    <button id="addNewDog">Add a new cute dog</button>
+</div>
+
+<div id="MyParks" class="tabcontent">
+    <h3>My Parks</h3>
+    <p>You can select the parks you want to participate in</p>
+</div>
+
+
+
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tabcontent.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    function checkIn(){
+        document.getElementById("checkInStatus").innerHTML = "You are playing in the park :)";
+        document.getElementById("checkOutStatus").innerHTML = "";
+    }
+
+    function checkOut(){
+        document.getElementById("checkInStatus").innerHTML = "";
+        document.getElementById("checkOutStatus").innerHTML = "You left the park :(";
+    }
+
+</script>
 </body>
 </html>
