@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
-@RequestMapping("dogTracker")
+@RequestMapping("")
 public class DogController {
     @Autowired
     DogService dogService;
