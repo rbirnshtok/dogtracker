@@ -15,7 +15,7 @@
 	<name>dogTracker</name>
 	<description>An app to help dog owners to check who is in the dog park</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
