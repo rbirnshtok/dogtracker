@@ -105,7 +105,7 @@
 									<groupId>com.heroku</groupId>
 									<artifactId>webapp-runner</artifactId>
 									<version>9.0.52.1</version>
-									<destFileName>target/dependency/webapp-runner.jar</destFileName>
+									<destFileName>webapp-runner.jar</destFileName>
 								</artifactItem>
 							</artifactItems>
 						</configuration>
